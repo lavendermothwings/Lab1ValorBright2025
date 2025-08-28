@@ -37,7 +37,7 @@ public class ViewBill {
 			text += item.getName() + " - " + item.getAmount() + System.lineSeparator();
 			subTotal += item.getAmount();
 		}
-		double num = TIP * subTotal;
+
 		text += System.lineSeparator();
 		text += "SUBTOTAL - $" + subTotal + System.lineSeparator();
 		text += "TAX - $" + (TAX * subTotal )+ System.lineSeparator();

@@ -6,6 +6,13 @@ import org.junit.Test;
 
 import edu.westga.cs1302.lab1.model.BillItem;
 
+/**
+ * Ensures correct functionality of the BillItem.
+ * 
+ * @author Valor Bright
+ * @version Fall 2025
+ */
+
  public class TestBillItem {
 	 
 	 
@@ -48,13 +55,6 @@ import edu.westga.cs1302.lab1.model.BillItem;
 		 assertThrows(IllegalArgumentException.class, 
 			     () -> new BillItem (null, 0.0));
 	 }
-	 
-	 
-	
-	 
-	 
-	 
-	 
 	 
 	 
 }

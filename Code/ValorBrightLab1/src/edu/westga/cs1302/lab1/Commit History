@@ -1,0 +1,9 @@
+Commit History
+
+Made new ViewBill class, I tested with JUnit, and I made two constants TIP and TAX
+
+Fixing the classes and adding the commit history 1) Fixed the ViewBill so that it added the prices 2) Created a commit history file
+
+Adding More Junit tests and cleaning up format 1)Added Junit test for ViewBill to check if text output is correct 2)cleaned up formating and code
+
+Finishing Touches 1)added information to JUnit 2) removed unnecessary code
