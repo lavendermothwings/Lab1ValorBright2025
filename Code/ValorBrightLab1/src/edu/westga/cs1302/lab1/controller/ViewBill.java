@@ -1,14 +1,11 @@
 package edu.westga.cs1302.lab1.controller;
-
-import java.util.ArrayList;
-
 import edu.westga.cs1302.lab1.model.Bill;
 import edu.westga.cs1302.lab1.model.BillItem;
 
 public class ViewBill { 
 	
-	private Bill bill;	
-	private ArrayList<BillItem> printBill;
+	public static final double TAX = 0.1;
+	public static final double TIP = 0.2;
 	
 	/**
 	 * Constructor for ViewBill
@@ -19,23 +16,11 @@ public class ViewBill {
 	 */
 	public ViewBill() {
 		
-		this.bill = new Bill();
-		this.printBill = new ArrayList<BillItem>();
+		
 		
 		
 	}
 	
-	
-//	public void addToViewBill (BillItem item) {
-//		
-//		
-//		bill.addItem(item);	
-//		printBill = bill.getItems();
-//		
-//	
-//
-//	}
-
 	/** Return a String containing the list of bill items and total for the bill.
 	 * 
 	 * 
@@ -52,14 +37,12 @@ public class ViewBill {
 			text += item.getName() + " - " + item.getAmount() + System.lineSeparator();
 			subTotal += item.getAmount();
 		}
-		
+		double num = TIP * subTotal;
 		text += System.lineSeparator();
 		text += "SUBTOTAL - $" + subTotal + System.lineSeparator();
-		double tax = subTotal * 0.1;
-		double tip = subTotal * 0.2;
-		text += "TAX - $" + tax + System.lineSeparator();
-		text += "TIP - $" + tip + System.lineSeparator();
-		text += "TOTAL - $" + (subTotal + tip + tax);
+		text += "TAX - $" + (TAX * subTotal )+ System.lineSeparator();
+		text += "TIP - $" + (TIP * subTotal )+ System.lineSeparator();
+		text += "TOTAL - $" + (subTotal + TIP + TAX);
 		
 		return text;
 	}

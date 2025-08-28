@@ -2,7 +2,6 @@ package edu.westga.cs1302.lab1.model;
 
 import java.util.ArrayList;
 
-import edu.westga.cs1302.lab1.controller.ViewBill;
 
 /** Stores information for a bill.
  * 
@@ -11,7 +10,7 @@ import edu.westga.cs1302.lab1.controller.ViewBill;
  */
 public class Bill {
 	private ArrayList<BillItem> items;
-	private ViewBill viewBill;
+	
 	public static final double TAX = 0.1;
 	public static final double TIP = 0.2;
 	
@@ -23,7 +22,7 @@ public class Bill {
 	 */
 	public Bill() {
 		this.items = new ArrayList<BillItem>();
-	//	this.viewBill = new ViewBill();
+	
 	}
 	
 	
@@ -39,10 +38,7 @@ public class Bill {
 			throw new IllegalArgumentException("item must not be null.");
 		}
 		this.items.add(item);
-	//	this.viewBill.addToViewBill(item);
 	
-		
-	//	 this.viewBill.addToViewBill(item);
 		
 	}
 	
