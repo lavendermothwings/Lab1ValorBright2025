@@ -1,12 +1,13 @@
 package edu.westga.cs1302.lab1.testing.billitem;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
 
 import edu.westga.cs1302.lab1.model.BillItem;
 
-/**
+ /**
  * Ensures correct functionality of the BillItem.
  * 
  * @author Valor Bright
@@ -14,17 +15,21 @@ import edu.westga.cs1302.lab1.model.BillItem;
  */
 
  public class TestBillItem {
-	 
-	 
-	 
+	  
+  /**
+	* Test Adding One Item
+	*/
 	 @Test
 	 
-	 public void testBillGetName () {
+	 public void testBillGetName() {
 		 BillItem item = new BillItem("apple", 3.0);
 		 String name;
 		 name = item.getName();
 		 assertEquals(name, "apple");
 	 }
+  /**
+   * Test Adding One Item
+   */
 	 
 	 @Test
 	 
@@ -35,27 +40,38 @@ import edu.westga.cs1302.lab1.model.BillItem;
 		 assertEquals(amount, 1.0);
 	 }
 	 
+  /**
+   * Test Adding One Item
+   */
+	 
 	 @Test
 	 
 	 public void testBillNameIsNull() {
 		 assertThrows(IllegalArgumentException.class, 
-			     () -> new BillItem (null, 1.0));
+			     () -> new BillItem(null, 1.0));
 	 }
+
+  /**
+   * Test Adding One Item
+   */
 	 
 	 @Test
 	 
 	 public void testBillAmountIsNegative() {
 		 assertThrows(IllegalArgumentException.class, 
-			     () -> new BillItem ("apple", -1.0));
+			     () -> new BillItem("apple", -1.0));
 	 }
  
+  /**
+   * Test Adding One Item
+   */	
+	 
 	 @Test
 	 
 	 public void testBillAmountIsZero() {
 		 assertThrows(IllegalArgumentException.class, 
-			     () -> new BillItem (null, 0.0));
+			     () -> new BillItem(null, 0.0));
 	 }
-	 
 	 
 }
 

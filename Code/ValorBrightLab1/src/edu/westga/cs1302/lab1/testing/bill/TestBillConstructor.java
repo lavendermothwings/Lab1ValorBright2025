@@ -1,6 +1,6 @@
 package edu.westga.cs1302.lab1.testing.bill;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 
@@ -18,9 +18,12 @@ import edu.westga.cs1302.lab1.model.BillItem;
 
 public class TestBillConstructor {
 
+   /**
+	* Test Adding One Item
+	*/
 			@Test
 			
-			public void testAddOneItem () {
+			public void testAddOneItem() {
 			
 				Bill myBill = new Bill();
 				BillItem apple = new BillItem("apple", 3.0);
@@ -29,8 +32,8 @@ public class TestBillConstructor {
 				ArrayList<BillItem> foodBill = new ArrayList<>();
 				foodBill = myBill.getItems();
 				int countItems = 0;
-				
-				for (int i = 0; i < foodBill.size(); ++i) {
+				int il;
+				for  (il = 0; il < foodBill.size(); ++il) {
 					
 					countItems += 1;
 				}
@@ -39,10 +42,12 @@ public class TestBillConstructor {
 				
 			}
 
-			
+   /**
+    * Test Adding Two Items
+    */
 			@Test
 			
-			public void testAddTwoItems () {
+			public void testAddTwoItems() {
 				
 				Bill myBill = new Bill();
 				BillItem apple = new BillItem("apple", 3.0);
@@ -53,19 +58,21 @@ public class TestBillConstructor {
 				foodBill = myBill.getItems();
 				int countItems = 0;
 				
-				for (int i = 0; i < foodBill.size(); ++i) {
+				for (int il = 0; il < foodBill.size(); ++il) {
 					
 					countItems += 1;
 				}
 				
 				assertEquals(countItems, 2);
-				
 		
 			}
 			
+   /**
+   * Test Adding One Item
+   */
 			@Test
 			
-			public void testAddThreeItems () {
+			public void testAddThreeItems() {
 				
 				Bill myBill = new Bill();
 				BillItem apple = new BillItem("apple", 3.0);
@@ -78,7 +85,7 @@ public class TestBillConstructor {
 				foodBill = myBill.getItems();
 				int countItems = 0;
 				
-				for (int i = 0; i < foodBill.size(); ++i) {
+				for (int il = 0; il < foodBill.size(); ++il) {
 					
 					countItems += 1;
 				}
@@ -86,10 +93,14 @@ public class TestBillConstructor {
 				assertEquals(countItems, 3);
 				
 			}
+
+   /**
+	* Test Adding One Item
+	*/
 			
 			@Test
 			
-			public void testGetItemAmount () {
+			public void testGetItemAmount() {
 				
 				Bill myBill = new Bill();
 				BillItem apple = new BillItem("apple", 3.0);
@@ -99,7 +110,7 @@ public class TestBillConstructor {
 				double amount = 0;
 				
 				for (BillItem viewBill : foodBill) {
-					amount= viewBill.getAmount();
+					amount = viewBill.getAmount();
 					
 				}
 				
@@ -107,9 +118,13 @@ public class TestBillConstructor {
 				
 			}
 			
+   /**
+	* Test Adding One Item
+	*/
+			
 			@Test
 			
-			public void testGetItemName () {
+			public void testGetItemName() {
 				
 				Bill myBill = new Bill();
 				BillItem apple = new BillItem("apple", 3.0);
@@ -119,13 +134,12 @@ public class TestBillConstructor {
 				String name = "";
 				
 				for (BillItem viewBill : foodBill) {
-					name= viewBill.getName();
+					name = viewBill.getName();
 					
 				}
 				
 				assertEquals(name, "apple");
 				
 			}
-			
 				
 	}

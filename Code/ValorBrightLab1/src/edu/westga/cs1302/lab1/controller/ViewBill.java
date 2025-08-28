@@ -1,7 +1,13 @@
 package edu.westga.cs1302.lab1.controller;
+
 import edu.westga.cs1302.lab1.model.Bill;
 import edu.westga.cs1302.lab1.model.BillItem;
 
+/** Gets text for viewing the Bill.
+ * 
+ * @author Valor Bright
+ * @version Fall 2025
+ */
 public class ViewBill { 
 	
 	public static final double TAX = 0.1;
@@ -10,15 +16,10 @@ public class ViewBill {
 	/**
 	 * Constructor for ViewBill
 	 * 
-	 * @postcondition getBill = bill
 	 * 
-	 * @param none 
 	 */
 	public ViewBill() {
-		
-		
-		
-		
+				
 	}
 	
 	/** Return a String containing the list of bill items and total for the bill.
@@ -27,6 +28,7 @@ public class ViewBill {
 	 * 
 	 * @precondition none
 	 * @postcondition none
+	 * @param foodBill the bill to get text from
 	 * 
 	 * @return a String containing the list of bill items and total for the bill
 	 */
@@ -40,8 +42,8 @@ public class ViewBill {
 
 		text += System.lineSeparator();
 		text += "SUBTOTAL - $" + subTotal + System.lineSeparator();
-		text += "TAX - $" + (TAX * subTotal )+ System.lineSeparator();
-		text += "TIP - $" + (TIP * subTotal )+ System.lineSeparator();
+		text += "TAX - $" + (TAX * subTotal) + System.lineSeparator();
+		text += "TIP - $" + (TIP * subTotal) + System.lineSeparator();
 		text += "TOTAL - $" + (subTotal + TIP + TAX);
 		
 		return text;
